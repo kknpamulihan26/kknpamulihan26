@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surat Orang yang Sama - SAJATI Desa Pamulihan</title>
+
+<style>
+:root{
+    --green:#173f32;
+    --green2:#245848;
+    --cream:#f4f0e6;
+    --brown:#9b7658;
+    --ink:#22352d;
+    --muted:#718078;
+    --white:#fff;
+    --line:#e4e0d6;
+}
+
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,"Poppins",sans-serif;
+    color:var(--ink);
+    background:#faf9f5;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* TOPBAR */
+.topbar{
+    height:38px;
+    background:var(--green);
+    color:#fff;
+    padding:0 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:12px;
+}
+
+.top-social{
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+/* NAVBAR */
+.navbar{
+    height:78px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    font-size:20px;
+}
+
+.logo-mark{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:var(--green);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:19px;
+}
+
+.logo small{
+    display:block;
+    font-size:8px;
+    letter-spacing:1.5px;
+    color:#777;
+    margin-top:2px;
+}
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.nav-menu>a:hover{
+    color:var(--green2);
+}
+
+.nav-dropdown{
+    position:relative;
+    padding:28px 0;
+}
+
+.nav-dropdown>span{
+    cursor:pointer;
+}
+
+.nav-dropdown>span:hover{
+    color:var(--green2);
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:65px;
+    left:-18px;
+    background:#fff;
+    min-width:190px;
+    box-shadow:0 12px 30px #0002;
+    border-radius:8px;
+    padding:8px;
+}
+
+.nav-dropdown:hover .dropdown-content{
+    display:block;
+}
+
+.dropdown-content a{
+    display:block;
+    padding:12px 13px;
+    border-radius:6px;
+}
+
+.dropdown-content a:hover{
+    background:var(--cream);
+    color:var(--green);
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(
+        110deg,
+        rgba(23,63,50,.98),
+        rgba(40,93,76,.95)
+    );
+    color:#fff;
+    padding:70px 7%;
+    min-height:300px;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero-kicker{
+    font-size:11px;
+    letter-spacing:2px;
+    opacity:.75;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-size:46px;
+    line-height:1.1;
+    margin:0 0 14px;
+    font-weight:800;
+}
+
+.hero p{
+    font-size:15px;
+    line-height:1.8;
+    max-width:700px;
+    opacity:.88;
+    margin:0;
+}
+
+/* CONTENT */
+.page-wrap{
+    max-width:1150px;
+    margin:auto;
+    padding:55px 7%;
+}
+
+.breadcrumb{
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:28px;
+}
+
+.breadcrumb a{
+    color:var(--green);
+    font-weight:700;
+}
+
+.content-grid{
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 8px 25px rgba(29,59,43,.05);
+}
+
+.card h2{
+    margin:0 0 10px;
+    font-size:25px;
+}
+
+.card-description{
+    color:var(--muted);
+    line-height:1.75;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+/* DOCUMENT */
+.document-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.document-item{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    padding:15px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:#fff;
+    transition:.2s;
+}
+
+.document-item:hover{
+    background:#faf9f5;
+    transform:translateX(3px);
+}
+
+.document-icon{
+    width:34px;
+    height:34px;
+    min-width:34px;
+    border-radius:50%;
+    background:var(--green);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.document-text{
+    font-size:14px;
+    line-height:1.65;
+}
+
+.document-text strong{
+    display:block;
+    color:var(--ink);
+    margin-bottom:2px;
+}
+
+/* INFO */
+.info-card{
+    background:var(--cream);
+    border-radius:17px;
+    padding:24px;
+    margin-bottom:22px;
+}
+
+.info-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:var(--green);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:15px;
+}
+
+.info-card h3{
+    margin:0 0 9px;
+    color:var(--green);
+    font-size:18px;
+}
+
+.info-card p{
+    color:#52645c;
+    font-size:13px;
+    line-height:1.75;
+    margin:0;
+}
+
+/* ALUR */
+.process{
+    display:flex;
+    flex-direction:column;
+    gap:19px;
+}
+
+.step{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+}
+
+.step-number{
+    width:34px;
+    height:34px;
+    min-width:34px;
+    border-radius:50%;
+    background:var(--green);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:13px;
+}
+
+.step-content strong{
+    display:block;
+    margin-bottom:4px;
+    font-size:14px;
+}
+
+.step-content span{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.6;
+}
+
+/* NOTICE */
+.notice{
+    margin-top:25px;
+    padding:18px;
+    background:var(--cream);
+    border-radius:12px;
+    color:#52645c;
+    font-size:13px;
+    line-height:1.75;
+}
+
+.notice strong{
+    color:var(--green);
+}
+
+/* BUTTON */
+.back-button{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--green);
+    color:#fff;
+    padding:14px 21px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:700;
+    margin-top:30px;
+    transition:.2s;
+}
+
+.back-button:hover{
+    background:var(--green2);
+}
+
+/* FOOTER */
+footer{
+    background:#163a2e;
+    color:#fff;
+    padding:55px 7% 25px;
+    margin-top:40px;
+}
+
+.footer-top{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:45px;
+}
+
+.footer-brand p,
+.footer-column p,
+.footer-column li{
+    font-size:13px;
+    line-height:1.7;
+    color:#c9d7d0;
+}
+
+.footer-brand p{
+    max-width:340px;
+}
+
+.footer-column h4{
+    margin:0 0 13px;
+    font-size:14px;
+}
+
+.footer-column ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-column li{
+    margin:8px 0;
+}
+
+.footer-column a:hover{
+    color:#fff;
+}
+
+.footer-divider{
+    height:1px;
+    background:#ffffff22;
+    margin:30px 0 18px;
+}
+
+.copyright{
+    font-size:11px;
+    color:#9db3aa;
+}
+
+/* RESPONSIVE */
+@media(max-width:850px){
+
+    .navbar,
+    .topbar{
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .nav-menu{
+        gap:15px;
+        font-size:11px;
+    }
+
+    .hero{
+        padding:55px 6%;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .page-wrap{
+        padding:45px 6%;
+    }
+
+    .content-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    .top-social{
+        display:none;
+    }
+
+    .navbar{
+        height:70px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .logo-mark{
+        width:33px;
+        height:33px;
+    }
+
+    .nav-menu{
+        gap:8px;
+    }
+
+    .nav-menu>a{
+        display:none;
+    }
+
+    .nav-dropdown{
+        padding:24px 0;
+    }
+
+    .hero{
+        min-height:260px;
+        padding:45px 6%;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:13px;
+    }
+
+    .card{
+        padding:22px;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+
+    <div>
+        ☎ Require Consultation? Contact Us Now
+    </div>
+
+    <div class="top-social">
+        ●　●　●　●
+    </div>
+
+</div>
+
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+            🌿
+        </span>
+
+        <span>
+            SAJATI
+            <small>DESA PAMULIHAN</small>
+        </span>
+
+    </a>
+
+
+    <div class="nav-menu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <div class="nav-dropdown">
+
+            <span>
+                About Us
+            </span>
+
+            <div class="dropdown-content">
+
+                <a href="index.html">
+                    Profil Desa
+                </a>
+
+                <a href="index.html">
+                    Sejarah Desa
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-dropdown">
+
+            <span>
+                Services
+            </span>
+
+            <div class="dropdown-content">
+
+                <a href="informasi-layanan.html">
+                    Informasi Layanan
+                </a>
+
+                <a href="administrasi-desa.html">
+                    Administrasi Desa
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <a href="index.html">
+            Contact Us
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            ADMINISTRASI KEPENDUDUKAN
+        </div>
+
+        <h1>
+            Surat Orang yang Sama
+        </h1>
+
+        <p>
+            Informasi persyaratan dan alur pelayanan
+            Surat Orang yang Sama Desa Pamulihan.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTENT -->
+<main class="page-wrap">
+
+
+    <div class="breadcrumb">
+
+        <a href="administrasi-desa.html">
+            Administrasi Desa
+        </a>
+
+        &nbsp; / &nbsp;
+
+        Surat Orang yang Sama
+
+    </div>
+
+
+    <div class="content-grid">
+
+
+        <!-- KIRI -->
+
+        <div>
+
+            <div class="card">
+
+                <h2>
+                    Dokumen yang Harus Disiapkan
+                </h2>
+
+                <p class="card-description">
+
+                    Untuk mengajukan pelayanan
+                    <strong>Surat Orang yang Sama</strong>,
+                    siapkan dokumen yang dapat menunjukkan
+                    bahwa perbedaan nama atau data tersebut
+                    merupakan orang yang sama.
+
+                </p>
+
+
+                <div class="document-list">
+
+
+                    <!-- KTP -->
+
+                    <div class="document-item">
+
+                        <div class="document-icon">
+                            ✓
+                        </div>
+
+                        <div class="document-text">
+
+                            <strong>
+                                Kartu Tanda Penduduk (KTP)
+                            </strong>
+
+                            Siapkan KTP pemohon sebagai
+                            dokumen identitas utama.
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- KK -->
+
+                    <div class="document-item">
+
+                        <div class="document-icon">
+                            ✓
+                        </div>
+
+                        <div class="document-text">
+
+                            <strong>
+                                Kartu Keluarga (KK)
+                            </strong>
+
+                            Siapkan KK sebagai dokumen
+                            pendukung identitas keluarga.
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- IDENTITAS LAIN -->
+
+                    <div class="document-item">
+
+                        <div class="document-icon">
+                            ✓
+                        </div>
+
+                        <div class="document-text">
+
+                            <strong>
+                                Dokumen Identitas Lain
+                            </strong>
+
+                            Dokumen identitas lain yang
+                            menunjukkan adanya perbedaan
+                            nama atau data.
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="notice">
+
+                    <strong>
+                        Catatan:
+                    </strong>
+
+                    Dokumen identitas yang dibawa harus dapat
+                    menunjukkan keterkaitan antara data yang
+                    berbeda. Petugas pelayanan perlu
+                    memeriksa keaslian dan kesesuaian
+                    dokumen sebelum proses pelayanan.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- KANAN -->
+
+        <div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    ℹ
+                </div>
+
+                <h3>
+                    Informasi Pelayanan
+                </h3>
+
+                <p>
+
+                    Surat ini digunakan untuk memberikan
+                    keterangan bahwa perbedaan nama atau
+                    data pada dokumen identitas merujuk
+                    kepada orang yang sama.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    Alur Pelayanan
+                </h2>
+
+
+                <div class="process">
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <div class="step-content">
+
+                            <strong>
+                                Siapkan Dokumen
+                            </strong>
+
+                            <span>
+                                Siapkan KTP, KK, dan dokumen
+                                identitas lain yang berkaitan
+                                dengan perbedaan data.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <div class="step-content">
+
+                            <strong>
+                                Pengajuan
+                            </strong>
+
+                            <span>
+                                Sampaikan dokumen kepada
+                                petugas pelayanan desa.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            3
+                        </div>
+
+                        <div class="step-content">
+
+                            <strong>
+                                Verifikasi
+                            </strong>
+
+                            <span>
+                                Petugas memeriksa kesesuaian
+                                identitas dan perbedaan data.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            4
+                        </div>
+
+                        <div class="step-content">
+
+                            <strong>
+                                Surat Diproses
+                            </strong>
+
+                            <span>
+                                Surat diproses setelah
+                                dokumen dinyatakan lengkap
+                                dan sesuai.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- KEMBALI -->
+
+    <a href="administrasi-desa.html" class="back-button">
+
+        ← Kembali ke Administrasi Desa
+
+    </a>
+
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+            <div class="logo">
+
+                <span class="logo-mark">
+                    🌿
+                </span>
+
+                <span>
+                    SAJATI
+                    <small>DESA PAMULIHAN</small>
+                </span>
+
+            </div>
+
+            <p>
+                Sistem Administrasi Jelas, Aman,
+                Terpadu, Informatif. Portal informasi
+                layanan Desa Pamulihan.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Phone
+            </h4>
+
+            <p>
+                +62 812 3456 7890
+            </p>
+
+            <h4>
+                Email
+            </h4>
+
+            <p>
+                desa@pamulihan.desa.id
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Navigation
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="informasi-layanan.html">
+                        Informasi Layanan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="administrasi-desa.html">
+                        Administrasi Desa
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Quick Link
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="ktp.html">
+                        KTP
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kk.html">
+                        Pengantar KK
+                    </a>
+                </li>
+
+                <li>
+                    <a href="domisili.html">
+                        Surat Domisili
+                    </a>
+                </li>
+
+                <li>
+                    <a href="perubahan-data.html">
+                        Perubahan Data Penduduk
+                    </a>
+                </li>
+
+                <li>
+                    <a href="orang-yang-sama.html">
+                        Surat Orang yang Sama
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-divider"></div>
+
+
+    <div class="copyright">
+        © 2026 SAJATI Desa Pamulihan • All Rights Reserved
+    </div>
+
+</footer>
+
+</body>
+</html>
